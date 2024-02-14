@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS variable</title>
+    <style>
+        :root{
+            --color:red;
+            --seccolor:pink;
+            --defpad: 23px;
+            --defop: 0.4;
+        }
+        .box{
+            padding: 30px;
+            list-style: none;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            display: flex;
+           
+        }
+        ul li{
+            list-style: none;
+            padding: var(--defpad);
+            border: 2px solid var(--seccolor);
+            margin: 3px;
+        }
+        ul li :first-child{
+            --color:red;
+
+            background-color: blue;
+              
+
+        }
+        .container{
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li>about</li>
+            <li>contact</li>
+            <li>menu</li>
+        </ul>
+    </div>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ipsa molestiae molestias fuga doloremque fugiat asperiores, magnam ea eveniet culpa non quis impedit.
+    </div>
+    
+</body>
+</html>
