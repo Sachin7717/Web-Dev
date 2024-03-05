@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .entry-box {
+    width: 200px;
+    height: 200px;
+    background-color: #007bff;
+    position: relative;
+    left: -200px;
+    animation: slideIn 1s forwards;
+  }
+  
+  @keyframes slideIn {
+    from {
+      left: -200px;
+    }
+    to {
+      left: 0;
+    }
+  }
+  
