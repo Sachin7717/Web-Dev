@@ -1,21 +1,35 @@
 
-async function getdata(params) {
-    return new Promise((resolve,reject)=>{
-    setTimeout(() => {
-        resolve(657)
-    }, 4000);
-   })
-}
-async function main(params) {
-    console.log('script is initilizing');
-console.log('loading data');
-let data= await getdata();
-console.log(data);
+// async function getdata(params) {
+//     return new Promise((resolve,reject)=>{
+//     setTimeout(() => {
+//         resolve(657)
+//     }, 4000);
+//    })
+// }
+async function getdata() {
+    // Simulate getting data from a server
+    let x = await fetch('https://jsonplaceholder.typicode.com/todos/1')
 
-console.log('output');
-    
+    // let x = await fetch('https://jsonplaceholder.typicode.com/posts')
+ 
+    let data = await x.json() 
+    return data
 }
-main()
+
+
+async function main(params) {
+    console.log('script is initializing');
+    console.log('loading data');
+    let data = await getdata();
+    console.log(data);
+
+    console.log('output');
+}
+
+main();
+
+
+  
 
 
 
