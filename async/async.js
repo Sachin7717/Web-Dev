@@ -6,12 +6,17 @@ async function getdata(params) {
     }, 4000);
    })
 }
-console.log('script is initilizing');
+async function main(params) {
+    console.log('script is initilizing');
 console.log('loading data');
-let data= getdata();
+let data= await getdata();
 console.log(data);
 
 console.log('output');
+    
+}
+main()
+
 
 
 
