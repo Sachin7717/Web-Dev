@@ -6,4 +6,24 @@ if (isNaN(a) || isNaN(b)) {
 }
 
 let sum = parseFloat(a) + parseFloat(b);
-console.log('The sum is', sum);
+function main() {
+    let x=5;
+    try {
+        console.log('The sum is', sum*x);
+        return true;
+    } catch (error) {
+        console.log('error aa rha h');
+        return false;
+        
+    }
+    finally{
+        console.log('code is executed fully');
+        
+    }
+    
+}
+let c= main();
+console.log(c);
+
+
+
