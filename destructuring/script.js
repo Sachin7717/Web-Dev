@@ -9,3 +9,13 @@ let obj ={
 
 let {a,b}=obj
 console.log(a,b);
+
+function sum(a,b,c) {
+    return a+b+c;
+}
+let arr = [1,2,3]
+//simple approaach
+console.log(arr[0]+arr[1]+arr[2]);
+
+//function approach
+console.log(sum(...arr));
